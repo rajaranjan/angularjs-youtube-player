@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+      <title>Youtube test</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="youtube.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+      <script src="app.js"></script>
+      <script src="controller.js"></script>
+      <script src="services.js"></script>
+  </head>
+  <body ng-app = "youApp" ng-controller = "youControl">
+      <div class="container">
+        <div class="row first_sec">
+          <p>{{yt.firstName}}  {{yt.lastName}}</p>
+        </div> 
+        <div class="row youtube_section">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8" id="ytplayer">
+            <P><span class="title_h">Title : </span> <span class="title_cls">{{yt.title}}</span></p>
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
+        <div class="row  youtube_section">
+           <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+                <youtube name="yout" width="640" height="390" videoid="{{yt.videoid}}" callback-fn="title1(arg)"></youtube>
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
+       </div>
+  </body>
+</html>
